@@ -76,7 +76,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: " Majaro Street, Onike, Yaba, Lagos, NG",
+  address: " Majaro Street, Onike-Yaba, Lagos",
   phoneNo: "+234 902 17281 85 ",
   email: "damilaregabz12@gmail.com",
 };

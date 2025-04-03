@@ -22,48 +22,46 @@ const childVariants ={
 
 const Hero = () => {
   return (
-    <div className='pb-4 lg:mb-36'>
-      <div className='flex flex-wrap lg:flex-row-reverse'>
-        <div className='w-full lg:w-1/2'>
-        <div className='flex justify-center lg:p-8'>
-          <motion.img src={profile} alt="DamiCodeX" className='border border-stone-500 rounded-3xl h-[400px] ' 
-          width={420}
-          height={420}
-          initial={{x:100, opacity:0}}
-          animate={{x:0, opacity:1}}
-          transition={{duration:1, ddelay:1.5}}        
-          />
-        </div>
-      </div>
-        <div className='w-full lg:w-1/2'>
-          <motion.div 
-
-          initial ='hidden'
-          animate ='visible'
+    <div className="flex min-h-screen items-center justify-center pb-4 lg:mb-36">
+      <div className="flex flex-col items-center text-center">
+        <motion.div
+          initial="hidden"
+          animate="visible"
           variants={containerVariants}
-          
-          className='flex flex-col items-center lg:items-start mt-6'>
-            <motion.h2 
+          className="flex flex-col items-center"
+        >
+          <motion.h2
             variants={childVariants}
-            className='pb-2 text-3xl tracking-tighter lg:text-7xl'>Gabriel Adeniran</motion.h2>
-            <motion.span 
+            className="pb-2 text-3xl text-center lg:text-7xl"
+          >
+            Gabriel Adeniran
+          </motion.h2>
+          <motion.span
             variants={childVariants}
-            className='bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent'>Frontend Developer</motion.span>
-            <motion.p variants={childVariants} className='my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter'>
-              {HERO_CONTENT}
-            </motion.p>
-            <motion.a 
+            className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-2xl lg:text-4xl tracking-tight text-center text-transparent"
+          >
+            Frontend Developer
+          </motion.span>
+          <motion.p
+            variants={childVariants}
+            className="my-2 max-w-5xl py-6 text-xl leading-relaxed tracking-tighter text-center"
+          >
+            {HERO_CONTENT}
+          </motion.p>
+          <motion.a
             variants={childVariants}
             href="/Gabriel Adeniran.pdf"
-            target='_blank'
-            rel='noopener noreferrer'
+            target="_blank"
+            rel="noopener noreferrer"
             download
-            className='bg-white rounded-full p-4 text-sm text-stone-600 mb-10 font-semibold'> Download Resume </motion.a>
-          </motion.div>
-        </div>
+            className="bg-white rounded-full p-4 text-sm text-stone-600 font-semibold"
+          >
+            Download Resume
+          </motion.a>
+        </motion.div>
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
 export default Hero
